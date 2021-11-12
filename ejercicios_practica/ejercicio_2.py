@@ -19,7 +19,8 @@ if __name__ == '__main__':
     # (len) de un string pasado como parámetro
 
     # len_string = lambda......
-
+    len_string = lambda x: len(x)
+    print(len_string("hola"))
     # 2)
     # Lista de string
     palabras = ['Inove', 'casa', 'programacion']
@@ -36,4 +37,10 @@ if __name__ == '__main__':
 
     # palabras_len = list(map....)
 
+    palabras_len = list(map(len_string, palabras)) # Utilizando funcion que contiene el lambda
+    print("cantidad de letras: ", palabras_len)
+    
+    palabras_inline = list(map(lambda x: len(x), palabras))  # Utilizando lambda inline
+    print("cantidad de letras: ", palabras_inline)
+    
     print("terminamos")
